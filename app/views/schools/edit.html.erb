@@ -1,0 +1,11 @@
+<h1 class="edit">EDITING SCHOOL DETAILS</h1>
+
+<%= render 'form', school: @school %>
+
+<div class="w3-btn-group w3-show-inline-block">
+  <button class="w3-btn">
+      <%= link_to 'SHOW', @school %>
+  </button>
+  <button class="w3-btn w3-teal">
+       <%= link_to 'BACK', schools_path %>
+  </button>

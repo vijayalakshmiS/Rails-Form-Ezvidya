@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<h1 class="show">SCHOOL DETAILS</h1>
+
+<p class="p">
+  <strong>SCHOOL NAME:</strong>
+  <%= @school.SCHOOLNAME %>
+</p>
+
+<p class="p">
+  <strong>ADDRESS:</strong>
+  <%= @school.ADDRESS %>
+</p>
+
+<p class="p">
+  <strong>CITY:</strong>
+  <%= @school.CITY %>
+</p>
+
+<p class="p">
+  <strong>STATE:</strong>
+  <%= @school.STATE %>
+</p>
+
+<p class="p">
+  <strong>PINCODE:</strong>
+  <%= @school.PINCODE %>
+</p>
+
+<p class="p">
+  <strong>AFFILIATED BOARD</strong>
+  <%= @school.AFFILIATEDBOARD %>
+</p>
+
+<div class="w3-btn-bar w3-border">
+  <button class="w3-btn"><%= link_to 'EDIT', edit_school_path(@school) %>
+  </button>
+
+  <button class="w3-btn"><%= link_to 'BACK', schools_path %></button>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Screens</title>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <header>
+    <div class="container-fluid">
+      <div class="logo-part">
+        <img alt="Brand" src="/assets/Skala-icon.png"> 
+        <%= link_to image_tag("settings.svg", class: 'a'), destroy_user_session_path, method: :delete %>
+     <!--   <a rel="nofollow" data-method="delete" href="/users/sign_out">
+       <img class="a" src="/assets/settings-b77eec5b75a761f9861fed4e04c9f6a680c907f45f5f96d71c87755118a124d3.svg" alt="Settings"></a>
+        </div> -->
+    </div>
+  </header>
+
+  <div class="navbar">
+      <ul class="">
+      <li><img alt="Brand" src="/assets/male3.svg"> <a href="/users/sign_up">User Management Portal</a></li>
+      <li><img alt="Brand" src="/assets/cash-register.svg"><a href="/register_schools/new">Registration Portal</a></li>
+      <li><img alt="Brand" src="/assets/controls.svg"> <a href="/register_schools/new">Content Portal</a></li> 
+    </ul>
+  </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+<!--   <header>
+  <div class="background_image">
+
+  </div>
+</header>
+
+  <nav class = "navbar navbar-default" id = "nav" role = "navigation">
+   
+   <div class = "navbar-header">
+      <a class = "navbar-brand" href = "#">User Management Portal</a>
+   </div>
+   
+   <div>
+      <p class = "navbar-text navbar-right">
+         
+         <a href = "#" class = "navbar-brand">Content Portal</a>
+      </p>
+   </div>
+   
+</nav> -->
+<!-- <img src="maxresdefault.jpg" alt="Paris" width="400" height="300"> -->
+    <%= yield %>
+  </body>
+</html>

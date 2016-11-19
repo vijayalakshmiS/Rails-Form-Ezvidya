@@ -1,0 +1,81 @@
+<%= form_for(school) do |f| %>
+  <% if school.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(school.errors.count, "error") %> prohibited this school from being saved:</h2>
+
+      <ul>
+      <% school.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :SCHOOLNAME, class:"label" %>
+    <%= f.text_field :SCHOOLNAME , class:"input"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :ADDRESS, class:"label" %>
+    <%= f.text_area :ADDRESS, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CITY ,class:"label" %>
+    <%= f.text_field :CITY, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :STATE ,class:"label" %>
+    <%= f.text_field :STATE, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PINCODE ,class:"label"%>
+    <%= f.text_area :PINCODE, class:"input" %>
+  </div>
+
+
+ <!--    <div>
+  <p>
+  <b>AFFILIATEDBOARD</b><br /><br />
+    <%= f.radio_button :AFFILIATEDBOARD, 'CBSE', class:"aa" %>
+     <%= f.label :AFFILIATEDBOARD, 'CBSE', :value => 'CBSE', class:"radio" %>
+    <%= f.radio_button :AFFILIATEDBOARD, 'ICSE',  class:"aa" %>
+      <%= label :AFFILIATEDBOARD, 'ICSE', class: "radio" %>
+    <%= f.radio_button :AFFILIATEDBOARD, 'Matric', class: "aa" %>
+     <%= label :AFFILIATEDBOARD, 'Matric', class: "radio" %>
+    <%= f.radio_button :AFFILIATEDBOARD, 'State Board',  class:"aa" %>
+     <%= label :AFFILIATEDBOARD, 'State Board', class: "radio " %>
+    </p>
+  </div> -->
+
+  <div>
+
+    <label>
+       AFFILIATEDBOARD
+    </label>
+
+     <label >
+      <%= f.radio_button :AFFILIATEDBOARD, 'CBSE' %><span>CBSE</span>
+    </label>
+
+    <label>
+      <%= f.radio_button :AFFILIATEDBOARD, 'ICSE' %><span>ICSE</span>
+    </label>
+
+    <label>
+    <%= f.radio_button :AFFILIATEDBOARD, 'Matric' %><span>Matric</span>  
+    </label>
+
+    <label>
+           <%= f.radio_button :AFFILIATEDBOARD, 'State Board' %><span>StateBoard</span>
+    </label>
+    
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
